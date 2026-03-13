@@ -1,0 +1,13 @@
+parameters:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\JwtTokenGeneratorInterface.account: '%env(SNOWFLAKE_ACCOUNT)%'
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\JwtTokenGeneratorInterface.user: '%env(SNOWFLAKE_USER)%'
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\JwtTokenGeneratorInterface.privateKey: '%env(file:SNOWFLAKE_PRIVATE_KEY_PATH)%'
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\JwtTokenGeneratorInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\JwtTokenGenerator
+    public: false
+    shared: true
+    calls:
+      - [setAccount, ['%Neighborhoods\SnowflakeSqlApiComponent\ClientV1\JwtTokenGeneratorInterface.account%']]
+      - [setUser, ['%Neighborhoods\SnowflakeSqlApiComponent\ClientV1\JwtTokenGeneratorInterface.user%']]
+      - [setPrivateKey, ['%Neighborhoods\SnowflakeSqlApiComponent\ClientV1\JwtTokenGeneratorInterface.privateKey%']]

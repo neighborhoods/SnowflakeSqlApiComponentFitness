@@ -1,0 +1,15 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponentFitness\ClientV1\TwoStatements\Worker:
+    class: Neighborhoods\SnowflakeSqlApiComponentFitness\ClientV1\TwoStatements\Worker
+    public: false
+    shared: true
+    calls:
+      - [setClientV1Client, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ClientInterface']]
+      - [setClientV1JwtTokenGenerator, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\JwtTokenGeneratorInterface']]
+      - [setClientV1ResultSetDataCasterFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\DataCaster\FactoryInterface']]
+      - [setClientV1StatementsRequestBodyBindVariableMapBuilderFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\BindVariable\Map\Builder\FactoryInterface']]
+      - [setClientV1StatementsRequestBodyFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\FactoryInterface']]
+      - [setClientV1StatementsRequestBodyParametersFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\Parameters\FactoryInterface']]
+      - [setClientV1StatementsRequestFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\FactoryInterface']]
+      - [setClientV1StatementsRequestQueryParametersFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\QueryParameters\FactoryInterface']]
+      - [configureJwtTokenGenerator]

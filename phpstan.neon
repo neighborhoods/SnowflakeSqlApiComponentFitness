@@ -1,0 +1,9 @@
+# Configuration file for PHPStan
+# vendor/bin/phpstan analyse
+parameters:
+	ignoreErrors:
+		- identifier: missingType.iterableValue
+	level: 8
+	paths:
+		- bin
+		- src

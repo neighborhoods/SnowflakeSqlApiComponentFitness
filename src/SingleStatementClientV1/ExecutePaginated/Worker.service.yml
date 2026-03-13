@@ -1,0 +1,9 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponentFitness\SingleStatementClientV1\ExecutePaginated\Worker:
+    class: Neighborhoods\SnowflakeSqlApiComponentFitness\SingleStatementClientV1\ExecutePaginated\Worker
+    public: false
+    shared: true
+    calls:
+      - [setSingleStatementClientV1Client, ['@Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\ClientInterface']]
+      - [setClientV1JwtTokenGenerator, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\JwtTokenGeneratorInterface']]
+      - [configureJwtTokenGenerator]
