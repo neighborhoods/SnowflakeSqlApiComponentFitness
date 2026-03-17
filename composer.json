@@ -1,0 +1,33 @@
+{
+    "name": "neighborhoods/snowflake-sql-api-component-fitness",
+    "description": "Fitness project for neighborhoods/snowflake-sql-api-component",
+    "authors": [
+        {
+            "name": "Hrvoje Jukic",
+            "email": "hrcajuka@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "neighborhoods/dependency-injection-container-builder": "^1.1",
+        "neighborhoods/snowflake-sql-api-component": "@dev",
+        "vlucas/phpdotenv": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Neighborhoods\\SnowflakeSqlApiComponentFitness\\": [
+                "src/"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "require-dev": {
+        "phpstan/phpstan": "2.2.x-dev",
+        "squizlabs/php_codesniffer": "*"
+    },
+    "scripts": {
+        "lint": "phpstan analyse && phpcs"
+    }
+}
