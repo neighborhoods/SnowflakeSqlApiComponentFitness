@@ -1,6 +1,6 @@
-# Snowfalke SQL API Component Fitness
+# Snowflake SQL API Component Fitness
 
-Examples of how to use the [Snowfalke SQL API Component](https://github.com/neighborhoods/SnowflakeSqlApiComponent).
+Examples of how to use the [Snowflake SQL API Component](https://github.com/neighborhoods/SnowflakeSqlApiComponent).
 All the examples use [DICBC](https://github.com/neighborhoods/DependencyInjectionContainerBuilderComponent) to build the Dependency Injection Container.
 
 ## Examples
